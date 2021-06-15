@@ -37,6 +37,8 @@ public class HandPresence : MonoBehaviour
 
         if (devices.Count > 0)
         {
+
+            Debug.Log("Test");
             targetDevice = devices[0];
             GameObject prefab = controllerPrefabs.Find(controller => controller.name == targetDevice.name);
             if (prefab)
@@ -49,11 +51,13 @@ public class HandPresence : MonoBehaviour
                 spawnedController.transform.Rotate(180, 0, 180);
             }
 
-
             spawnedHandModel = Instantiate(handModelPrefab, transform);
             handAnimator = spawnedHandModel.GetComponent<Animator>();
 
+
         }
+
+
     }
 
     void UpdateHandAnimation()
