@@ -4036,7 +4036,7 @@ MonoBehaviour:
   rightTeleportRay: {fileID: 927522322}
   teleportActivationButton: 2
   activationThreshold: 0.2
-  rightInteractorRay: {fileID: 0}
+  rightInteractorRay: {fileID: 1987786571}
 --- !u!143 &1041138114
 CharacterController:
   m_ObjectHideFlags: 0
