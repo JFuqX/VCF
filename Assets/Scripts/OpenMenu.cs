@@ -19,8 +19,9 @@ public class OpenMenu : MonoBehaviour
     void Start()
     {
         leftHandPresenceScript = leftHandPresence.GetComponent<HandPresence>();
+        instantiatedMenu = Instantiate(menu, new Vector3(leftHandPositionMenu.position.x - 0.2f, leftHandPositionMenu.position.y + 0.4f, leftHandPositionMenu.position.z), new Quaternion(0, 0, 0, 0));
+        instantiatedMenu.transform.Rotate(25, 90, 0);
 
-        
     }
 
     // Update is called once per frame
