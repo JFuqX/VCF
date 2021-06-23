@@ -34,14 +34,14 @@ public class FadeFootprint : MonoBehaviour
 
         if (changeOne == true)
         {
-            float startTime = Time.time;
-            float t = (Time.time - startTime);
-            rend.material.Lerp(material1, material2, t);
+            //float startTime = Time.time;
+            //float t = (Time.time - startTime);
+            //rend.material.Lerp(material1, material2, t);
 
-            if(t >= 2)
-            {
-                Debug.Log("Ja");
-            }
+            //if(t >= 2)
+            //{
+            //    Debug.Log("Ja");
+            //}
             //float lerp = Mathf.PingPong(Time.time, duration) / duration;
             //rend.material.Lerp(material1, material2, duration);
             //if(duration >= 2f)
@@ -49,6 +49,8 @@ public class FadeFootprint : MonoBehaviour
             //    duration = 0;
             //    changeOne = false;
             //}
+            rend.material = material2;
+            changeOne = false;
         }
 
         if(changeTwo == true)
@@ -60,6 +62,8 @@ public class FadeFootprint : MonoBehaviour
             //    duration = 0;
             //    changeTwo = false;
             //}
+            rend.material = material1;
+            changeTwo = false;
         }
     }
 
