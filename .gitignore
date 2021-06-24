@@ -62,3 +62,11 @@ crashlytics-build.properties
 
 # *.meta
 
+Assets/VR Controllers Models/Default Controllers/Default Controller.obj.meta
+Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_left/oculus_cv1_controller_left.obj.meta
+Assets/VR Controllers Models/Oculus Controllers/oculus_cv1_controller_right/oculus_cv1_controller_right.obj.meta
+Assets/VR Controllers Models/Oculus Controllers/oculus_rifts_controller_left/oculus_rifts_controller_left.obj.meta
+Assets/VR Controllers Models/Oculus Controllers/oculus_rifts_controller_right/oculus_rifts_controller_right.obj.meta
+Assets/VR Controllers Models/Valve Index Controllers/valve-index-controller-left/source/valve_controller_knu_1_0_left.obj.meta
+Assets/VR Controllers Models/Valve Index Controllers/valve-index-controller-right/source/valve_controller_knu_1_0_right.obj.meta
+Assets/VR Controllers Models/Vive Controllers/Models/vr_controller_vive_1_5.obj.meta
