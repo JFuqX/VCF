@@ -10,7 +10,7 @@ public class OpenMenu : MonoBehaviour
     public GameObject leftHandPresence;
     public Transform leftHandPositionMenu;
     public GameObject menu;
-    public GameObject instantiatedMenu;
+    //public GameObject instantiatedMenu;
 
     public bool menuOpen = false;
     public bool openOnce = false;
@@ -18,11 +18,20 @@ public class OpenMenu : MonoBehaviour
     public bool pastPress = false;
     public bool newPress = false;
 
+    public GameObject scanner;
+    public GameObject uvLamp;
+    private GameObject scannerObject;
+    private GameObject uvLampObject;
+
+    public GameObject spawnObjectTransform;
+    
+
     // Start is called before the first frame update
     void Start()
     {
         leftHandPresenceScript = leftHandPresence.GetComponent<HandPresence>();
-      
+        scanner.SetActive(false);
+        uvLamp.SetActive(false);
 
     }
 
@@ -40,23 +49,25 @@ public class OpenMenu : MonoBehaviour
             {
                 openOnce = true;
             }
-            Debug.Log(primaryButtonValue);
-
+           
             if (menuOpen == true && primaryButtonValue == true && openOnce == true)
             {
 
                 //Close Menu
-                Destroy(instantiatedMenu);
+                //Destroy(instantiatedMenu);
+                menu.SetActive(false);
                 openOnce = false;
                 menuOpen = false;
             }
 
             if (menuOpen == false && primaryButtonValue == true && openOnce == true)
             {
-           
+
                 //Open Menu
-                instantiatedMenu = Instantiate(menu, new Vector3(leftHandPositionMenu.position.x - 0.2f, leftHandPositionMenu.position.y + 0.4f, leftHandPositionMenu.position.z), new Quaternion(0, 0, 0, 0));
-                instantiatedMenu.transform.Rotate(25, 90, 0);
+                //instantiatedMenu = Instantiate(menu, new Vector3(leftHandPositionMenu.position.x - 0.2f, leftHandPositionMenu.position.y + 0.4f, leftHandPositionMenu.position.z), new Quaternion(0, 0, 0, 0));
+                //instantiatedMenu.transform.Rotate(25, 90, 0);
+                menu.SetActive(true);
+                menu.transform.Rotate(25, 90, 0);
                 openOnce = false;
                 menuOpen = true;
             }
@@ -65,4 +76,37 @@ public class OpenMenu : MonoBehaviour
        
         }
     }
+
+
+    public void SpawnScanner()
+    {
+        scanner.SetActive(true);
+        scanner.transform.position = spawnObjectTransform.transform.position;
+        //scannerObject = Instantiate(scanner, spawnObjectTransform);
+        
+    }
+
+    public void SpawnUVLamp()
+    {
+        uvLamp.SetActive(true);
+        uvLamp.transform.position = spawnObjectTransform.transform.position;
+        //uvLampObject = Instantiate(uvLamp, spawnObjectTransform);
+
+    }
+
+
+    public void DeleteScanner()
+    {
+        scanner.SetActive(false);
+        //Destroy(scannerObject);
+        Debug.Log("Destroy canner");
+    }
+
+    public void DeleteUVLamp()
+    {
+        uvLamp.SetActive(false);
+        //Destroy(uvLampObject);
+    }
+
+
 }
