@@ -2199,8 +2199,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 129b19e0a6fce2048aeb203f37c02d1e,
         type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 129b19e0a6fce2048aeb203f37c02d1e,
+        type: 3}
       propertyPath: m_TagString
       value: Key
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 129b19e0a6fce2048aeb203f37c02d1e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 129b19e0a6fce2048aeb203f37c02d1e, type: 3}

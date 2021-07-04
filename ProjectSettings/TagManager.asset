@@ -7,6 +7,8 @@ TagManager:
   - Footprint
   - DeadBody
   - Key
+  - SoundHandler
+  - PlayerTextOutput
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Separating Wall
   - 
   - Grab
   - Ground
