@@ -696,7 +696,7 @@ GameObject:
   - component: {fileID: 322989537}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13836,6 +13836,54 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1197099941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1197099943}
+  - component: {fileID: 1197099942}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1197099942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197099941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c8ada1950d570bf4f8c74fd59d3410b6, type: 2}
+--- !u!4 &1197099943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1197099941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.1349773, y: 1.2859404, z: -4.1837397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1216414437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14074,6 +14122,7 @@ GameObject:
   - component: {fileID: 1276857330}
   - component: {fileID: 1276857329}
   - component: {fileID: 1276857328}
+  - component: {fileID: 1276857336}
   m_Layer: 10
   m_Name: VR Rig
   m_TagString: Untagged
@@ -14215,6 +14264,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1276857336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276857327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a165edbcd20396e4cbc856a85277bb20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 1197099941}
 --- !u!1001 &1351490030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16758,11 +16820,13 @@ MonoBehaviour:
   leftHandPresence: {fileID: 2047797697}
   leftHandPositionMenu: {fileID: 2040497244}
   menu: {fileID: 1698115894}
-  instantiatedMenu: {fileID: 0}
   menuOpen: 0
   openOnce: 1
   pastPress: 0
   newPress: 0
+  scanner: {fileID: 0}
+  uvLamp: {fileID: 0}
+  spawnObjectTransform: {fileID: 0}
 --- !u!1 &1909298168
 GameObject:
   m_ObjectHideFlags: 0
