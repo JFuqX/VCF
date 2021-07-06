@@ -81,7 +81,7 @@ public class OpenMenu : MonoBehaviour
     public void SpawnScanner()
     {
         scanner.SetActive(true);
-        scanner.transform.position = spawnObjectTransform.transform.position;
+        scanner.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x);
         //scannerObject = Instantiate(scanner, spawnObjectTransform);
         
     }
@@ -89,7 +89,7 @@ public class OpenMenu : MonoBehaviour
     public void SpawnUVLamp()
     {
         uvLamp.SetActive(true);
-        uvLamp.transform.position = spawnObjectTransform.transform.position;
+        uvLamp.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x);
         //uvLampObject = Instantiate(uvLamp, spawnObjectTransform);
 
     }
