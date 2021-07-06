@@ -1,15 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/boardUI/boardUI_unity.blend.meta
-guid: 5297cb44dd460a0488c4886893ee40e1
-=======
-guid: ac74b85f129d5bf4e890ab446ff6c88b
->>>>>>> 74dcb447829bce1407bc3937aca8ec095559eaa0:Assets/table/office_desk.fbx.meta
+guid: 129b19e0a6fce2048aeb203f37c02d1e
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable:
-  - first:
-      74: -623603649343465320
-    second: Scene
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     materialImportMode: 2

@@ -16,7 +16,8 @@ public class FadeFootprint : MonoBehaviour
     bool changeOne = false;
     bool changeTwo = false;
 
-    
+    public Light light;
+    private bool isBrightEnough = false;
 
     // Start is called before the first frame update
     void Start()
@@ -27,43 +28,55 @@ public class FadeFootprint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (light.intensity <= 0.8f)
+        {
+            isBrightEnough = true;
+        }
+        else
+        {
+            isBrightEnough = false;
+        }
+
         if (cooldown >= 0)
         {
             cooldown -= Time.deltaTime;
         }
-
-        if (changeOne == true)
+        if (isBrightEnough == true)
         {
-            //float startTime = Time.time;
-            //float t = (Time.time - startTime);
-            //rend.material.Lerp(material1, material2, t);
+            if (changeOne == true)
+            {
+                //float startTime = Time.time;
+                //float t = (Time.time - startTime);
+                //rend.material.Lerp(material1, material2, t);
 
-            //if(t >= 2)
-            //{
-            //    Debug.Log("Ja");
-            //}
-            //float lerp = Mathf.PingPong(Time.time, duration) / duration;
-            //rend.material.Lerp(material1, material2, duration);
-            //if(duration >= 2f)
-            //{
-            //    duration = 0;
-            //    changeOne = false;
-            //}
-            rend.material = material2;
-            changeOne = false;
-        }
+                //if(t >= 2)
+                //{
+                //    Debug.Log("Ja");
+                //}
+                //float lerp = Mathf.PingPong(Time.time, duration) / duration;
+                //rend.material.Lerp(material1, material2, duration);
+                //if(duration >= 2f)
+                //{
+                //    duration = 0;
+                //    changeOne = false;
+                //}
+                rend.material = material2;
+                changeOne = false;
+            }
 
-        if(changeTwo == true)
-        {
-            //float lerp = Mathf.PingPong(Time.time, duration) / duration;
-            //rend.material.Lerp(material2, material1, duration);
-            //if (duration >= 2f)
-            //{
-            //    duration = 0;
-            //    changeTwo = false;
-            //}
-            rend.material = material1;
-            changeTwo = false;
+            if (changeTwo == true)
+            {
+                //float lerp = Mathf.PingPong(Time.time, duration) / duration;
+                //rend.material.Lerp(material2, material1, duration);
+                //if (duration >= 2f)
+                //{
+                //    duration = 0;
+                //    changeTwo = false;
+                //}
+                rend.material = material1;
+                changeTwo = false;
+            }
         }
     }
 
@@ -71,15 +84,14 @@ public class FadeFootprint : MonoBehaviour
     public void StartFadeFootprint()
     {
 
-        if (cooldown <= 0)
+        if (isBrightEnough == true && cooldown <= 0)
         {
-
-
 
             changeOne = true;
             Invoke("StartFadeoutFootprint", 10);
             cooldown = 2;
         }
+        
     }
 
     void StartFadeoutFootprint()

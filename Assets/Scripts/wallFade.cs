@@ -8,12 +8,13 @@ public class wallFade : MonoBehaviour
     public GameObject Wall;
     public Material WallMatOffice;
     public Material WallMatTatort;
-
+    private GameObject vrRig;
+    private float distanceToPlayer = 3.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        vrRig = GameObject.Find("VR Rig");
 
         
     }
@@ -28,12 +29,12 @@ public class wallFade : MonoBehaviour
     {
         Material wallMat = Wall.GetComponent<Material>();
         RaycastHit hit;
-        Debug.DrawRay(transform.position, new Vector3(0,10,0), Color.green);
 
 
-        if (Physics.Raycast(transform.position, new Vector3(0, 0, 10), out hit, Mathf.Infinity, layerMask))
+
+        if (Physics.Raycast(vrRig.transform.position, new Vector3(0, 0, 10), out hit, Mathf.Infinity, layerMask))
         {
-            Debug.Log(hit.distance);
+            
             //if(hit.distance < 2.0f)
             //{
             //    Color color = WallMat.color;
@@ -48,7 +49,7 @@ public class wallFade : MonoBehaviour
             //}
 
 
-            if (hit.distance < 3)
+            if (hit.distance < distanceToPlayer)
             {
 
                 Color colorOffice = WallMatOffice.color;
@@ -62,9 +63,9 @@ public class wallFade : MonoBehaviour
             }
 
         }
-        else if (Physics.Raycast(transform.position, new Vector3(0, 0, -10), out hit, Mathf.Infinity, layerMask))
+        else if (Physics.Raycast(vrRig.transform.position, new Vector3(0, 0, -10), out hit, Mathf.Infinity, layerMask))
         {
-            Debug.Log(hit.distance);
+        
             //if(hit.distance < 2.0f)
             //{
             //    Color color = WallMat.color;
@@ -79,7 +80,7 @@ public class wallFade : MonoBehaviour
             //}
 
 
-            if (hit.distance < 3)
+            if (hit.distance < distanceToPlayer)
             {
 
                 Color colorOffice = WallMatOffice.color;
