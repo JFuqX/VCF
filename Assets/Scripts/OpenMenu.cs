@@ -23,6 +23,8 @@ public class OpenMenu : MonoBehaviour
     private GameObject scannerObject;
     private GameObject uvLampObject;
 
+    public GameObject keyboard;
+
     public GameObject spawnObjectTransform;
     
 
@@ -100,6 +102,22 @@ public class OpenMenu : MonoBehaviour
         uvLamp.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z);
         //uvLampObject = Instantiate(uvLamp, spawnObjectTransform);
 
+    }
+
+    public void SpawnKeyboard()
+    {
+        keyboard.SetActive(true);
+        keyboard.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 1f, spawnObjectTransform.transform.position.y - 1f, spawnObjectTransform.transform.position.z + 0.4f);
+        keyboard.GetComponent<followPlayer>().isOnPlayer = true;
+        //Destroy(uvLampObject);
+    }
+
+    public void DeleteKeyboard()
+    {
+        keyboard.SetActive(false);
+        keyboard.GetComponent<followPlayer>().isOnPlayer = false;
+
+        //Destroy(uvLampObject);
     }
 
 

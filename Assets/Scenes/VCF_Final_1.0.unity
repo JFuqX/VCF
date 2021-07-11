@@ -22233,7 +22233,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -24740,6 +24740,7 @@ GameObject:
   - component: {fileID: 1199728548}
   - component: {fileID: 1199728547}
   - component: {fileID: 1199728546}
+  - component: {fileID: 1199728554}
   m_Layer: 10
   m_Name: VR Rig
   m_TagString: Untagged
@@ -24881,6 +24882,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1199728554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1199728545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a165edbcd20396e4cbc856a85277bb20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 1774865048}
 --- !u!1 &1211041085
 GameObject:
   m_ObjectHideFlags: 0
@@ -30895,7 +30909,7 @@ GameObject:
   - component: {fileID: 1464865835}
   m_Layer: 0
   m_Name: Plane (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33360,6 +33374,7 @@ MonoBehaviour:
   newPress: 0
   scanner: {fileID: 1850282319}
   uvLamp: {fileID: 1240825220}
+  keyboard: {fileID: 0}
   spawnObjectTransform: {fileID: 1793359912}
 --- !u!135 &1664669096
 SphereCollider:
@@ -35106,6 +35121,54 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cd0601cf7da9dc4f80b1d60facd05c5, type: 3}
+--- !u!1 &1774865048
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774865050}
+  - component: {fileID: 1774865049}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1774865049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774865048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: c8ada1950d570bf4f8c74fd59d3410b6, type: 2}
+--- !u!4 &1774865050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774865048}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.1349773, y: 1.2859404, z: -4.1837397}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1775780299 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 23062208c1e1ace4d9e5270be8b68dcb,
@@ -40219,12 +40282,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d3d50792d68dd34babd9787ce943577, type: 3}
---- !u!108 &2138519405 stripped
-Light:
-  m_CorrespondingSourceObject: {fileID: 880527485, guid: 5d3d50792d68dd34babd9787ce943577,
-    type: 3}
-  m_PrefabInstance: {fileID: 2138519404}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138519406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1229017858, guid: 5d3d50792d68dd34babd9787ce943577,
@@ -40243,9 +40300,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b45563ba24bc2498641265fbedff93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1437829}
-  light: {fileID: 2138519405}
-  scanned: 0
 --- !u!54 &2138519408
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -40936,9 +40990,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b45563ba24bc2498641265fbedff93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slider: {fileID: 1437829}
-  light: {fileID: 4116467651367445861}
-  scanned: 0
 --- !u!54 &4116467650477833760
 Rigidbody:
   m_ObjectHideFlags: 0
