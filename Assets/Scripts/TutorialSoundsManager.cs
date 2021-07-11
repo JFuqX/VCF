@@ -30,45 +30,49 @@ public class TutorialSoundsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (player.transform.position.z < 10)
+       
+        if (player.transform.position.z < -20)
         {
             //Entscheidung Tutorial oder nicht, erklärung laufen
             if (source.isPlaying == false)
             {
+                
                 source.clip = audio1;
                 source.Play();
             }
 
         }
-        else if (player.transform.position.z > 10 && player.transform.position.z < 24)
+        else if (player.transform.position.z > -20 && player.transform.position.z < -15.5)
         {
             //erklärung teleportieren
             if (source.isPlaying == false)
             {
+               
                 source.clip = audio2;
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 24 && player.transform.position.z < 40)
+        else if (player.transform.position.z > -15.5 && player.transform.position.z < -11)
         {
             //Runterlaufen oder teleportieren
             if (source.isPlaying == false)
             {
+               
                 source.clip = audio3;
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 40 && player.transform.position.z < 55)
+        else if (player.transform.position.z > -11 && player.transform.position.z < -6.5f)
         {
             //erklären grabben
             if (source.isPlaying == false)
             {
+              
                 source.clip = audio4;
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 55 && player.transform.position.z < 70)
+        else if (player.transform.position.z > -6.5f && player.transform.position.z < -2.3f)
         {
             //grabben cabin und grabben dann trigger
             if (source.isPlaying == false)
@@ -78,7 +82,7 @@ public class TutorialSoundsManager : MonoBehaviour
             }
 
         }
-        else if (player.transform.position.z > 70 && player.transform.position.z < 84)
+        else if (player.transform.position.z > -2.3f && player.transform.position.z < 2)
         {
             //Grabben mit Raycast
             if (source.isPlaying == false)
@@ -87,7 +91,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 84 && player.transform.position.z < 97)
+        else if (player.transform.position.z > 2 && player.transform.position.z < 5.8f)
         {
             //Erklären UI
             if (source.isPlaying == false)
@@ -96,7 +100,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 97 && player.transform.position.z < 111)
+        else if (player.transform.position.z > 5.8f && player.transform.position.z < 9.9f)
         {
             //Öffnen menu
             if (source.isPlaying == false)
@@ -105,7 +109,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 111 && player.transform.position.z < 123)
+        else if (player.transform.position.z > 9.9f && player.transform.position.z < 13.5f)
         {
             //Tag Nacht slider, Uv Lampe und Fußspuren
             if (source.isPlaying == false)
@@ -114,7 +118,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 123 && player.transform.position.z < 136)
+        else if (player.transform.position.z > 13.5f && player.transform.position.z < 17.2f)
         {
             //Scannen Deadbody and slider
             if (source.isPlaying == false)
@@ -123,7 +127,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 136 && player.transform.position.z < 148)
+        else if (player.transform.position.z > 17.2f && player.transform.position.z < 20.8f)
         {
             //Notizbuch
             if (source.isPlaying == false)
@@ -132,7 +136,7 @@ public class TutorialSoundsManager : MonoBehaviour
                 source.Play();
             }
         }
-        else if (player.transform.position.z > 148)
+        else if (player.transform.position.z > 20.8f)
         {
             //End Tutorial
             if (source.isPlaying == false)

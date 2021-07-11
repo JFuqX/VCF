@@ -38,6 +38,7 @@ public class OpenMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(spawnObjectTransform.transform.position);
         if (leftHandPresenceScript.targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue))
         {
             newPress = primaryButtonValue;
@@ -80,16 +81,23 @@ public class OpenMenu : MonoBehaviour
 
     public void SpawnScanner()
     {
+        
+        Debug.Log(new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z));
+        scanner.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        scanner.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
         scanner.SetActive(true);
-        scanner.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x);
+        scanner.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z);
         //scannerObject = Instantiate(scanner, spawnObjectTransform);
         
     }
 
     public void SpawnUVLamp()
     {
+        Debug.Log(new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x));
+        uvLamp.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        uvLamp.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
         uvLamp.SetActive(true);
-        uvLamp.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x);
+        uvLamp.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z);
         //uvLampObject = Instantiate(uvLamp, spawnObjectTransform);
 
     }
