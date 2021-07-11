@@ -1,8 +1,26 @@
 fileFormatVersion: 2
-guid: 8ef4d98869c688740b544a65e1bb5923
+guid: 2dd6801d9ced85c49848cac9eec0963f
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -6894213021299004052
+    second: Markus|MarkusAction
+  - first:
+      74: -5553705734733831805
+    second: side_panels|MarkusAction
+  - first:
+      74: 5691706498240214107
+    second: border.001|MarkusAction
+  - first:
+      74: -6826608527468776453
+    second: Plane.001|MarkusAction
+  - first:
+      74: 8606607541625980333
+    second: Plane.003|MarkusAction
+  - first:
+      74: -7310424597120673949
+    second: border|MarkusAction
   externalObjects: {}
   materials:
     materialImportMode: 2

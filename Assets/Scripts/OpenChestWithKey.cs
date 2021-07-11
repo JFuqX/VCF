@@ -22,14 +22,14 @@ public class OpenChestWithKey : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("goes into trigger");
+        //Debug.Log("goes into trigger");
         if (other.tag == "Key")
         {
             Debug.Log("OpensChest");
             anim.SetBool("Open", true);
         }
 
-        Debug.Log(other.tag);
+        //Debug.Log(other.tag);
     }
 
 

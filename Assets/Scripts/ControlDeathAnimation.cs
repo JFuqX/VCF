@@ -28,7 +28,7 @@ public class ControlDeathAnimation : MonoBehaviour
         m_CurrentClipLength = m_CurrentClipInfo[0].clip.length;
         //Access the Animation clip name
         m_ClipName = m_CurrentClipInfo[0].clip.name;
-        print(m_CurrentClipLength);
+        //print(m_CurrentClipLength);
         timer = (1 / m_CurrentClipLength) / 60;
     }
 
