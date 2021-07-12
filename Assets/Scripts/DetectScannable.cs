@@ -26,14 +26,15 @@ public class DetectScannable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
- 
+        Debug.Log("Enter collider");
         if (other.tag == "DeadBody")
         {
-           
+
+            Debug.Log("Enter DeadBody");
             if (scanned == false)
             {
-                
+
+                Debug.Log("Enter IF");
                 light.color = new Color(0, 0, 255);
                 
                 Invoke("ActivateSlider", 3);

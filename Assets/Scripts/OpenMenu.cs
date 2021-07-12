@@ -24,9 +24,11 @@ public class OpenMenu : MonoBehaviour
     private GameObject uvLampObject;
 
     public GameObject keyboard;
+    public GameObject tagNachtSlider;
 
     public GameObject spawnObjectTransform;
-    
+    private bool sliderSpawned = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +42,7 @@ public class OpenMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(spawnObjectTransform.transform.position);
+        
         if (leftHandPresenceScript.targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryButtonValue))
         {
             newPress = primaryButtonValue;
@@ -84,9 +86,9 @@ public class OpenMenu : MonoBehaviour
     public void SpawnScanner()
     {
         
-        Debug.Log(new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z));
+        
         scanner.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        scanner.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
+        //scanner.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
         scanner.SetActive(true);
         scanner.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z);
         //scannerObject = Instantiate(scanner, spawnObjectTransform);
@@ -95,9 +97,9 @@ public class OpenMenu : MonoBehaviour
 
     public void SpawnUVLamp()
     {
-        Debug.Log(new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.x));
+     
         uvLamp.GetComponent<Rigidbody>().velocity = Vector3.zero;
-        uvLamp.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
+        //uvLamp.GetComponent<Rigidbody>().rotation = new Quaternion(0, 0, 0, 0);
         uvLamp.SetActive(true);
         uvLamp.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 0.3f, spawnObjectTransform.transform.position.y, spawnObjectTransform.transform.position.z);
         //uvLampObject = Instantiate(uvLamp, spawnObjectTransform);
@@ -112,6 +114,24 @@ public class OpenMenu : MonoBehaviour
         //Destroy(uvLampObject);
     }
 
+    public void SpawnOrDeleteSlider()
+    {
+        if (sliderSpawned == false)
+        {
+            tagNachtSlider.SetActive(true);
+            sliderSpawned = true;
+        }
+        else
+        {
+            tagNachtSlider.SetActive(false);
+            sliderSpawned = false;
+        }
+
+
+    }
+
+
+
     public void DeleteKeyboard()
     {
         keyboard.SetActive(false);
@@ -125,7 +145,7 @@ public class OpenMenu : MonoBehaviour
     {
         scanner.SetActive(false);
         //Destroy(scannerObject);
-        Debug.Log("Destroy canner");
+     
     }
 
     public void DeleteUVLamp()

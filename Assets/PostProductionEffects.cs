@@ -6,12 +6,12 @@ public class PostProductionEffects : MonoBehaviour
 {
     public GameObject effect;
 
-
+    public float borderZPosition = 3.3f;
 
 
     private void Update()
     {
-        if (this.transform.position.z >= 3.3f)
+        if (this.transform.position.z >= borderZPosition)
         {
             effect.SetActive(true);
         }
