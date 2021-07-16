@@ -14,7 +14,7 @@ public class FollowPlayerAndLookAt : MonoBehaviour
     {
         //camRot = camera.transform.rotation;
         camRot = camera.transform.forward;
-        Debug.Log(camRot);
+        
 
 
         Vector3 tarPos = target.transform.position;

@@ -17409,12 +17409,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6105b601b41f760459093da70824f303, type: 2}
+      objectReference: {fileID: 2100000, guid: 25fb87a8b8f213d40a8b5a78d186bc73, type: 2}
     - target: {fileID: -5738929356375114689, guid: 84561012965159f4abbd8eba7d80df79,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 00ada413c1cf6e440b8e4ba7322f74aa, type: 2}
+      objectReference: {fileID: 2100000, guid: 3205d26086e8ab74db501d658bba71c1, type: 2}
     - target: {fileID: -3286910004361259421, guid: 84561012965159f4abbd8eba7d80df79,
         type: 3}
       propertyPath: m_TagString
@@ -17449,12 +17449,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 25fb87a8b8f213d40a8b5a78d186bc73, type: 2}
+      objectReference: {fileID: 2100000, guid: 3205d26086e8ab74db501d658bba71c1, type: 2}
     - target: {fileID: 2321523695958950486, guid: 84561012965159f4abbd8eba7d80df79,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6105b601b41f760459093da70824f303, type: 2}
+      objectReference: {fileID: 2100000, guid: 25fb87a8b8f213d40a8b5a78d186bc73, type: 2}
     - target: {fileID: 4123177642777943866, guid: 84561012965159f4abbd8eba7d80df79,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -17464,7 +17464,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6105b601b41f760459093da70824f303, type: 2}
+      objectReference: {fileID: 2100000, guid: 00ada413c1cf6e440b8e4ba7322f74aa, type: 2}
     - target: {fileID: 6657560127643677590, guid: 84561012965159f4abbd8eba7d80df79,
         type: 3}
       propertyPath: m_TagString
@@ -18349,8 +18349,8 @@ MonoBehaviour:
   newPress: 0
   scanner: {fileID: 340233374}
   uvLamp: {fileID: 702961335}
-  keyboard: {fileID: 0}
-  tagNachtSlider: {fileID: 0}
+  keyboard: {fileID: 1696711731}
+  tagNachtSlider: {fileID: 1673058704}
   spawnObjectTransform: {fileID: 1364238691}
 --- !u!135 &2067848455
 SphereCollider:

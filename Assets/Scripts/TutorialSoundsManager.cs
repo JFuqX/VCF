@@ -21,6 +21,8 @@ public class TutorialSoundsManager : MonoBehaviour
     public AudioClip audio11;
     public AudioClip audio12;
 
+    private float cooldown = 15;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,123 +32,132 @@ public class TutorialSoundsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        if (player.transform.position.z < -20)
-        {
-            //Entscheidung Tutorial oder nicht, erklärung laufen
-            if (source.isPlaying == false)
-            {
-                
-                source.clip = audio1;
-                source.Play();
-            }
 
-        }
-        else if (player.transform.position.z > -20 && player.transform.position.z < -15.5)
+        if(cooldown >= 0)
         {
-            //erklärung teleportieren
-            if (source.isPlaying == false)
-            {
-               
-                source.clip = audio2;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > -15.5 && player.transform.position.z < -11)
-        {
-            //Runterlaufen oder teleportieren
-            if (source.isPlaying == false)
-            {
-               
-                source.clip = audio3;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > -11 && player.transform.position.z < -6.5f)
-        {
-            //erklären grabben
-            if (source.isPlaying == false)
-            {
-              
-                source.clip = audio4;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > -6.5f && player.transform.position.z < -2.3f)
-        {
-            //grabben cabin und grabben dann trigger
-            if (source.isPlaying == false)
-            {
-                source.clip = audio5;
-                source.Play();
-            }
-
-        }
-        else if (player.transform.position.z > -2.3f && player.transform.position.z < 2)
-        {
-            //Grabben mit Raycast
-            if (source.isPlaying == false)
-            {
-                source.clip = audio6;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 2 && player.transform.position.z < 5.8f)
-        {
-            //Erklären UI
-            if (source.isPlaying == false)
-            {
-                source.clip = audio7;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 5.8f && player.transform.position.z < 9.9f)
-        {
-            //Öffnen menu
-            if (source.isPlaying == false)
-            {
-                source.clip = audio8;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 9.9f && player.transform.position.z < 13.5f)
-        {
-            //Tag Nacht slider, Uv Lampe und Fußspuren
-            if (source.isPlaying == false)
-            {
-                source.clip = audio9;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 13.5f && player.transform.position.z < 17.2f)
-        {
-            //Scannen Deadbody and slider
-            if (source.isPlaying == false)
-            {
-                source.clip = audio10;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 17.2f && player.transform.position.z < 20.8f)
-        {
-            //Notizbuch
-            if (source.isPlaying == false)
-            {
-                source.clip = audio11;
-                source.Play();
-            }
-        }
-        else if (player.transform.position.z > 20.8f)
-        {
-            //End Tutorial
-            if (source.isPlaying == false)
-            {
-                source.clip = audio12;
-                source.Play();
-            }
+            cooldown -= Time.deltaTime;
         }
 
 
+        if (cooldown < 0)
+        {
+            if (player.transform.position.z < -20)
+            {
+                //Entscheidung Tutorial oder nicht, erklärung laufen
+                if (source.isPlaying == false)
+                {
+
+                    source.clip = audio1;
+                    source.Play();
+                }
+
+            }
+            else if (player.transform.position.z > -20 && player.transform.position.z < -15.5)
+            {
+                //erklärung teleportieren
+                if (source.isPlaying == false)
+                {
+
+                    source.clip = audio2;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > -15.5 && player.transform.position.z < -11)
+            {
+                //Runterlaufen oder teleportieren
+                if (source.isPlaying == false)
+                {
+
+                    source.clip = audio3;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > -11 && player.transform.position.z < -6.5f)
+            {
+                //erklären grabben
+                if (source.isPlaying == false)
+                {
+
+                    source.clip = audio4;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > -6.5f && player.transform.position.z < -2.3f)
+            {
+                //grabben cabin und grabben dann trigger
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio5;
+                    source.Play();
+                }
+
+            }
+            else if (player.transform.position.z > -2.3f && player.transform.position.z < 2)
+            {
+                //Grabben mit Raycast
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio6;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 2 && player.transform.position.z < 5.8f)
+            {
+                //Erklären UI
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio7;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 5.8f && player.transform.position.z < 9.9f)
+            {
+                //Öffnen menu
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio8;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 9.9f && player.transform.position.z < 13.5f)
+            {
+                //Tag Nacht slider, Uv Lampe und Fußspuren
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio9;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 13.5f && player.transform.position.z < 17.2f)
+            {
+                //Scannen Deadbody and slider
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio10;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 17.2f && player.transform.position.z < 20.8f)
+            {
+                //Notizbuch
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio11;
+                    source.Play();
+                }
+            }
+            else if (player.transform.position.z > 20.8f)
+            {
+                //End Tutorial
+                if (source.isPlaying == false)
+                {
+                    source.clip = audio12;
+                    source.Play();
+                }
+            }
+
+            cooldown = 20;
+        }
 
 
         

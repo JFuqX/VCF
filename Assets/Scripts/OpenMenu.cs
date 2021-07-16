@@ -36,7 +36,7 @@ public class OpenMenu : MonoBehaviour
         leftHandPresenceScript = leftHandPresence.GetComponent<HandPresence>();
         scanner.SetActive(false);
         uvLamp.SetActive(false);
-
+        tagNachtSlider.SetActive(false);
     }
 
     // Update is called once per frame
@@ -120,11 +120,13 @@ public class OpenMenu : MonoBehaviour
         {
             tagNachtSlider.SetActive(true);
             sliderSpawned = true;
+            Debug.Log("Slider is Active");
         }
         else
         {
             tagNachtSlider.SetActive(false);
             sliderSpawned = false;
+            Debug.Log("Slider is Inactive");
         }
 
 

@@ -6,7 +6,7 @@ public class UpAndDownScanner : MonoBehaviour
 {
 
     private float position = 0;
-    private float positionAdd = 0.05f;
+    private float positionAdd = 0.04f;
     private bool up = true;
 
     // Start is called before the first frame update
