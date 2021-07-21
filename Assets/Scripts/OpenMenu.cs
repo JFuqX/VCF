@@ -24,6 +24,12 @@ public class OpenMenu : MonoBehaviour
     private GameObject uvLampObject;
 
     public GameObject keyboard;
+    public GameObject cameraObj;
+    public GameObject board;
+    public GameObject stick;
+    public GameObject keys;
+
+
     public GameObject tagNachtSlider;
 
     public GameObject spawnObjectTransform;
@@ -109,9 +115,20 @@ public class OpenMenu : MonoBehaviour
     public void SpawnKeyboard()
     {
         keyboard.SetActive(true);
-        keyboard.transform.position = new Vector3(spawnObjectTransform.transform.position.x - 1f, spawnObjectTransform.transform.position.y - 1f, spawnObjectTransform.transform.position.z + 0.4f);
-        keyboard.GetComponent<followPlayer>().isOnPlayer = true;
-        //Destroy(uvLampObject);
+        Vector3 camRot = cameraObj.transform.forward;
+        Vector3 tarPos = cameraObj.transform.position;
+
+        tarPos += new Vector3(camRot.x, -0.7f, camRot.z);
+
+        keyboard.transform.position = tarPos;
+
+        keyboard.transform.LookAt(new Vector3(cameraObj.transform.position.x, keyboard.transform.position.y, cameraObj.transform.position.z));
+
+
+        foreach ( KeyFeedback child in keys.GetComponentsInChildren<KeyFeedback>())
+        {
+            child.updatePosition();
+        }
     }
 
     public void SpawnOrDeleteSlider()

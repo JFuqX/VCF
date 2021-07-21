@@ -8,7 +8,8 @@ public class KeyFeedback : MonoBehaviour
     public bool keyHit = false;
     public bool keyCanBeHitAgain = false;
 
-    private float originalYPosition;
+
+    public float originalYPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class KeyFeedback : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(keyHit)
         {
 
@@ -37,5 +39,10 @@ public class KeyFeedback : MonoBehaviour
         {
             keyCanBeHitAgain = true;
         }
+    }
+
+    public void updatePosition()
+    {
+        originalYPosition = transform.position.y;
     }
 }
