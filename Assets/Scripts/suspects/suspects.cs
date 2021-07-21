@@ -41,17 +41,17 @@ public class suspects : MonoBehaviour
 
     [SerializeField] private Transform originalPortrait;
 
-    [SerializeField] static private float horizontalDistance;
+    [SerializeField] static private float horizontalDistance = 0.1f;
 
-    [SerializeField] static private float verticalDistance;
+    [SerializeField] static private float verticalDistance = 0.1f;
 
 
-    private static Vector3 horizontalDistanceVec = new Vector3(0, horizontalDistance, 0);
-    private static Vector3 verticalDistanceVec = new Vector3(0, verticalDistance, 0);
+    private static Vector3 horizontalDistanceVec = Vector3.right * horizontalDistance;
+    private static Vector3 verticalDistanceVec = Vector3.down * verticalDistance;
 
 
     // Declare array of Suspects
-    Suspect[] suspectPortraits =
+    [SerializeField] private Suspect[] suspectPortraits =
 {
             new Suspect("Joe B", 42, Sex.male, HairColor.bald, 180),
             new Suspect("Joe B", 42, Sex.male, HairColor.bald, 180),
@@ -81,8 +81,14 @@ public class suspects : MonoBehaviour
 
         };
 
+        if(suspectPortraits.Length == portaitPos.Length)
+        {
+            for(int i=0; i<suspectPortraits.Length; i++)
+            {
 
-    int[] zahlen = { 42, 21 };
+            }
+        }
+
     }
 
     // Update is called once per frame
