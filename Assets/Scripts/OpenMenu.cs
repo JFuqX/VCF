@@ -24,6 +24,7 @@ public class OpenMenu : MonoBehaviour
     private GameObject uvLampObject;
 
     public GameObject keyboard;
+    private bool keyboardIsActive = false;
     public GameObject cameraObj;
     public GameObject board;
     public GameObject stick;
@@ -114,20 +115,31 @@ public class OpenMenu : MonoBehaviour
 
     public void SpawnKeyboard()
     {
-        keyboard.SetActive(true);
-        Vector3 camRot = cameraObj.transform.forward;
-        Vector3 tarPos = cameraObj.transform.position;
-
-        tarPos += new Vector3(camRot.x, -0.7f, camRot.z);
-
-        keyboard.transform.position = tarPos;
-
-        keyboard.transform.LookAt(new Vector3(cameraObj.transform.position.x, keyboard.transform.position.y, cameraObj.transform.position.z));
-
-
-        foreach ( KeyFeedback child in keys.GetComponentsInChildren<KeyFeedback>())
+        if(keyboardIsActive)
         {
-            child.updatePosition();
+            keyboard.SetActive(false);
+            keyboardIsActive = false;
+        }
+        else
+        {
+
+            keyboard.SetActive(true);
+            Vector3 camRot = cameraObj.transform.forward;
+            Vector3 tarPos = cameraObj.transform.position;
+
+            tarPos += new Vector3(camRot.x, -0.7f, camRot.z);
+
+            keyboard.transform.position = tarPos;
+
+            keyboard.transform.LookAt(new Vector3(cameraObj.transform.position.x, keyboard.transform.position.y, cameraObj.transform.position.z));
+
+
+            foreach ( KeyFeedback child in keys.GetComponentsInChildren<KeyFeedback>())
+            {
+                child.updatePosition();
+            }
+
+            keyboardIsActive = true;
         }
     }
 
@@ -147,16 +159,6 @@ public class OpenMenu : MonoBehaviour
         }
 
 
-    }
-
-
-
-    public void DeleteKeyboard()
-    {
-        keyboard.SetActive(false);
-        keyboard.GetComponent<followPlayer>().isOnPlayer = false;
-
-        //Destroy(uvLampObject);
     }
 
 
