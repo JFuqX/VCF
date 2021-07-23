@@ -10,6 +10,9 @@ TagManager:
   - SoundHandler
   - PlayerTextOutput
   - Ground
+  - suspectName
+  - suspectAge
+  - suspectText
   layers:
   - Default
   - TransparentFX
