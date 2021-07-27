@@ -124,6 +124,9 @@ public class suspects : MonoBehaviour
             case 5:
                 suspectHaircolor = HairColor.bald;
                 break;
+            case 6:
+                suspectHaircolor = HairColor.black;
+                break;
 
         }
 
@@ -307,6 +310,15 @@ public class suspects : MonoBehaviour
 
             unhideAll();
         }
+
+        minAge.value = 0.0f;
+        maxAge.value = 0.0f;
+
+        minHeight.value = 100.0f;
+        maxHeight.value = 100.0f;
+
+        hairColor.value = 0;
+        sexDropdown.value = 0;
     }
 
     void hideAll()

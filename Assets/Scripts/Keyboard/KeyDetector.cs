@@ -60,12 +60,14 @@ public class KeyDetector : MonoBehaviour
 
         if(key != null)
         {
-            if(playerTextOutput.text[playerTextOutput.text.Length - 1] == '|')
+            if(playerTextOutput.text.Length != 0)
             {
-                playerTextOutput.text = playerTextOutput.text.Substring(0, playerTextOutput.text.Length - 1);
-                removedCursor = true;
+                if (playerTextOutput.text[playerTextOutput.text.Length - 1] == '|')
+                {
+                    playerTextOutput.text = playerTextOutput.text.Substring(0, playerTextOutput.text.Length - 1);
+                    removedCursor = true;
+                }
             }
-
 
             KeyFeedback keyFeedback = other.gameObject.GetComponent<KeyFeedback>();
             if (keyFeedback.keyCanBeHitAgain)

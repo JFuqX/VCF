@@ -9,7 +9,7 @@ public enum Sex
 };
 public enum HairColor
 {
-    blonde, brown, red, grey, bald, unknown
+    blonde, brown, red, grey, bald, unknown, black
 };
 
 public class suspectClass : MonoBehaviour
