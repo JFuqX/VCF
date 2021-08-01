@@ -18,12 +18,12 @@ public class FollowPlayerAndLookAt : MonoBehaviour
 
 
         Vector3 tarPos = target.transform.position;
-        tarPos += new Vector3(camRot.x, 1, camRot.z);
+        tarPos += new Vector3(camRot.x, camRot.y + 1.0f, camRot.z);
         //tarPos += new Vector3(target.transform.position.x + camRot.x * 5, target.transform.position.y, target.transform.position.z + camRot.z * 2 + 5);
 
         this.transform.position = Vector3.MoveTowards(transform.position, tarPos, 0.3f);
 
-        this.transform.LookAt(target.transform);
+        this.transform.LookAt(new Vector3(target.transform.position.x, target.transform.position.y+1.5f, target.transform.position.z));
 
     }
 

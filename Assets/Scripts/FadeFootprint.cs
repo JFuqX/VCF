@@ -88,7 +88,7 @@ public class FadeFootprint : MonoBehaviour
         {
 
             changeOne = true;
-            Invoke("StartFadeoutFootprint", 10);
+            Invoke("StartFadeoutFootprint", 30);
             cooldown = 2;
         }
         

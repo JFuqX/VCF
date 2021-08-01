@@ -127,7 +127,7 @@ public class OpenMenu : MonoBehaviour
             Vector3 camRot = cameraObj.transform.forward;
             Vector3 tarPos = cameraObj.transform.position;
 
-            tarPos += new Vector3(camRot.x, -0.7f, camRot.z);
+            tarPos += new Vector3(camRot.x, -1.1f, camRot.z);
 
             keyboard.transform.position = tarPos;
 
