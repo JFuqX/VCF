@@ -410,17 +410,17 @@ PrefabInstance:
     - target: {fileID: 3569767294013078989, guid: 5838b4e452bc66f4d90ae293f7fbcb0e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3026264
+      value: -3.189
       objectReference: {fileID: 0}
     - target: {fileID: 3569767294013078989, guid: 5838b4e452bc66f4d90ae293f7fbcb0e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.593229
+      value: -1.393
       objectReference: {fileID: 0}
     - target: {fileID: 3569767294013078989, guid: 5838b4e452bc66f4d90ae293f7fbcb0e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.3622403
+      value: 1.359
       objectReference: {fileID: 0}
     - target: {fileID: 3569767294013078989, guid: 5838b4e452bc66f4d90ae293f7fbcb0e,
         type: 3}
@@ -1932,6 +1932,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3217b1ce4679df94f8c9cd33e8990c0b, type: 3}
+--- !u!1 &190644393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 190644394}
+  m_Layer: 0
+  m_Name: Notebook and Pen (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &190644394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190644393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 381460551}
+  m_RootOrder: 75
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &197850031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2901,7 +2931,21 @@ Transform:
   m_Father: {fileID: 381460551}
   m_RootOrder: 70
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &254046897 stripped
+--- !u!4 &254046897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758233976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 381460551}
+  m_RootOrder: 74
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &254046898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 254046881}
@@ -3974,7 +4018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &381460547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4138,6 +4182,8 @@ Transform:
   - {fileID: 36378435}
   - {fileID: 1215471556}
   - {fileID: 254046897}
+  - {fileID: 190644394}
+  - {fileID: 254046898}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
@@ -11176,7 +11222,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b54eafa35bc665741806ca372581ef18, type: 2}
+  - {fileID: 2100000, guid: 22715439102c09a4684169af41362c75, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -31043,6 +31089,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754832027}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1758233976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 254046897}
+  m_Layer: 0
+  m_Name: Notebook and Pen (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1762298461
 GameObject:
   m_ObjectHideFlags: 0
@@ -36543,17 +36605,17 @@ PrefabInstance:
     - target: {fileID: 4403746209980144577, guid: 5d3d50792d68dd34babd9787ce943577,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.3836265
+      value: -3.197
       objectReference: {fileID: 0}
     - target: {fileID: 4403746209980144577, guid: 5d3d50792d68dd34babd9787ce943577,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.636229
+      value: -1.469
       objectReference: {fileID: 0}
     - target: {fileID: 4403746209980144577, guid: 5d3d50792d68dd34babd9787ce943577,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8272405
+      value: 1.821
       objectReference: {fileID: 0}
     - target: {fileID: 4403746209980144577, guid: 5d3d50792d68dd34babd9787ce943577,
         type: 3}
